@@ -1,0 +1,7 @@
+custom_block.admin_settings:
+  path: '/admin/config/user-interface/site-configuration'
+  defaults:
+    _form: '\Drupal\custom_block\Form\CustomConfigForm'
+    _title: 'Configure the Website Information'
+  requirements:
+    _permission: 'administrator'

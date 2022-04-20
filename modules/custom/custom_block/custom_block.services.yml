@@ -1,0 +1,4 @@
+services:
+  custom_block.get_time:
+    class: Drupal\custom_block\TimeService
+    arguments: ['@config.factory']

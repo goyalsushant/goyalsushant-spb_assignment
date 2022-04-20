@@ -1,0 +1,5 @@
+name: Custom Block
+type: module
+description: Display Website Location and Time.
+core_version_requirement: ^8 || ^9
+package: Custom

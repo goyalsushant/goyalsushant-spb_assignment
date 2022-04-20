@@ -1,0 +1,31 @@
+<?php
+
+/**
+ * @file
+ * Contains main module functions.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function custom_block_theme() {
+
+  return [
+    'custom_block' => [
+      'variables' => [
+        'block_content' => NULL,
+      ],
+    ],
+  ];
+
+}
+
+/**
+ * Implements hook_page_attachments().
+ */
+function custom_block_page_attachments(array &$page) {
+  $website_timezone = \Drupal::config('custom_website_config.settings')->get('cwc.site_timezone');
+
+  $page['#attached']['library'][] = 'custom_block/custom_block';
+  $page['#attached']['drupalSettings']['custom_block']['timezone'] = $website_timezone;
+}
